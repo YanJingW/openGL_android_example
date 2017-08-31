@@ -122,9 +122,12 @@ public class Square {
 
         gl10.glEnableClientState(GL10.GL_NORMAL_ARRAY);
         gl10.glEnableClientState(GL10.GL_VERTEX_ARRAY);
+        gl10.glEnableClientState(GL10.GL_COLOR_ARRAY);
 
         gl10.glVertexPointer(3, GL10.GL_FLOAT, 0, mVertexBuffer);
         gl10.glNormalPointer(GL10.GL_FLOAT, 0, mNormalBuffer);
+        gl10.glColorPointer(4, GL10.GL_FLOAT, 0, colorBuffer);
+
 
         gl10.glDrawElements(GL10.GL_TRIANGLES, indices.length,
                 GL10.GL_UNSIGNED_SHORT, mIndexBuffer);

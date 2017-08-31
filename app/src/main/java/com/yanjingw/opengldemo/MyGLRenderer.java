@@ -44,7 +44,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         int[] textures = new int[1];
         gl10.glGenTextures(1, textures, 0);
 
-        Bitmap bitmap = BitmapFactory.decodeResource(DemoApp.instance.getResources(), R.drawable.sanliuling);
+        Bitmap bitmap = BitmapFactory.decodeResource(DemoApp.instance.getResources(), R.drawable.sanliuling360);
         square.setTex(gl10, textures[0], bitmap);
 
         gl10.glMatrixMode(GL10.GL_MODELVIEW);
