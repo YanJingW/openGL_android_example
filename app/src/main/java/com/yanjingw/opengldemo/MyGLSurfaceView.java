@@ -21,16 +21,15 @@ import android.view.MotionEvent;
 
 public class MyGLSurfaceView extends GLSurfaceView {
 
-    private final MyGLRenderer mRenderer;
 
     public MyGLSurfaceView(Context context) {
         super(context);
 
-        setEGLContextClientVersion(2);
-        super.setEGLConfigChooser(8 , 8, 8, 8, 16, 0);
-        mRenderer = new MyGLRenderer();
-        setRenderer(mRenderer);
 
+        super.setEGLConfigChooser(8 , 8, 8, 8, 16, 0);
+
+        MyGLRenderer mRenderer = new MyGLRenderer();
+        setRenderer(mRenderer);
         setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
     }
 
